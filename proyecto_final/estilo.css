@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    display: block;
+    justify-content: center;
+    background: #675AFE;
+  }
+  .contenedor{
+    background-image: url(imagenes/cripto2.jpg);
+    height: 100%;
+
+  }
+  
+  .cotizador{
+    height: 180px;
+    width: 290px;
+    padding: 2px;
+    margin-left: 42%;
+    margin-top: 10%;
+    border-radius: 7px;
+    background-image: url(imagenes/btc.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+  .cotizador h1{
+    font-size: 25px;
+    color: #4534fe;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding-left: 8%;
+
+}
+  
+  .cotizador input{
+    justify-content: center;
+    height: 30px;
+    width: 250px;
+    margin-left: 13%;
+  
+  }
+
+  .Primerimput{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    margin-left: 45%;
+
+  }
+.Primerimput div p{
+
+ height: 30px;
+    width: 250px;
+    color: #4534fe;
+}
+.mjsBoton{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 22%;
+}
+.boton{
+
+    margin-left: 45%;
+    height: 40px;
+    width: 100px;
+background-color: #4534fe;
+color: #fff;}

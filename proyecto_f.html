@@ -17,20 +17,18 @@
         </div>
       <div class="Primerimput">
         <div>
-            <p>Si tenes</p>
-            <div >
-              <select class="select" id="monedaUno">
+            <p>Si tenes</p>              <select class="select" id="monedaUno">
                 <option value="">Elija su moneda</option>
-                <option value="USD">USD</option>
+                <option value="USD" id="dolar">USD</option>   
                 <option value="Btc" id="uno">Bitcoin</option>
                 <option value="Eth" id ="dos">Ethereum</option>
                 <option value="Ada" id="tres">Ada</option>
                 <option value="xrp" id="cuatro">Xrp</option>
               </select>
-          <input class="selectInput" type="number" id="valorUno" value="1">
+                <input class="selectInput" type="number" id="valorUno" value="1">
 
             </div>
-          </div>
+           
 <div class="contenedor">
             <div>
               <button id="taza">
@@ -39,38 +37,42 @@
             </div>
 
 </div>
+<form action=""><div > 
 
-           <div > 
-
-            <p><b>Recibiras</b></p>
-
-            <div >
+            <p><b>Recibiras</b></p>  <div >
               <select class="select" id="monedaDos">
                  
-                <option value="">Elija su moneda</option>
-                <option value="USD" >USD</option>
-                <option value="Btc" id="uno">Bitcoin</option>
-                <option value="Eth" id ="dos">Ethereum</option>
-                <option value="Ada" id="tres">Ada</option>
-                <option value="xrp" id="cuatro">Xrp</option>
+                <option value="USD" id="dolar">USD</option>   
 
-                <input class="selectInput" type="number" id="valorDos" >
+              
+            
 
+<!--                 <input class="selectInput" type="number" id="valorDos" >
+ -->
                             
               </select>
+            
+          </div>
+<div >
+
+           
             <div class="resultado" id="valorCotizado"> 
 
-            </div>   <br>
-            <br><br>
+            </div>  
+             <br>
+            <br>
+            <br>
 
             </div>
           </div>
         </div>
 
-      <!--   <div class="mjsBoton">Toque el boton para obtener su cotizacion...</div>
-
-        <button class="boton" value="convertir" >Solicite su cotizacion</button>
-            </div>  -->
+<!--         <div class="mjsBoton">Toque el boton para obtener su cotizacion...</div>
+ -->
+        <button class="boton" value="convertir" id="boton" >Solicite su cotizacion</button>
+           </form>
+           
+            </div>
 
   <h2>Te gustaria conocer las demas cotizaciones</h2>
   <select name="cotizacion" id="cotgral">

@@ -1,36 +1,71 @@
-function convertir() {
+const criptoUno =document.getElementById( 'monedaUno')
+const criptoDos =document.getElementById( 'monedaDos')
+const cantidadUno = document.getElementById('valorUno')
+const cantidadDos = document.getElementById('valorDos')
+const intercambio = document.getElementById('taza')
+const finalIntercambio = document.getElementById('valorCotizado')
+const btcoin = document.getElementById('uno')
+const ethe = document.getElementById('dos')
+const cardano = document.getElementById('tres')
+const ripple = document.getElementById('cuatro')
 
-  let cripto =prompt("ingrese la criptomoneda btc/eth/ada/xrp "); 
-  let dolar = parseFloat(prompt("ingrese la cantidad de dolares a convertir")); 
+
+/* Eventos */
+
+criptoUno.addEventListener('change',convertir)
+cantidadUno.addEventListener('input',convertir)
+criptoDos.addEventListener('change',convertir)
+cantidadDos.addEventListener('input',convertir)
+btcoin.addEventListener('change',convertir)
+ethe.addEventListener('change',convertir)
+cardano.addEventListener('change',convertir)
+ripple.addEventListener('change',convertir)
+finalIntercambio.addEventListener('change',convertir)
+intercambio.addEventListener("change",convertir)
+
+
+intercambio.addEventListener('click', ()=>{
+  const cambio = criptoUno.value;
+  criptoUno.value = criptoDos.value; 
+  criptoDos.value = cambio;
+  convertir();
+})
+
+
+
+function convertir(){
+
+  let dolar = 1;
   let bitcoin = 19237;
   let etereum = 1052;
   let ada = 0.44;
   let xrp = 0.31;
   let resultado = 0;
 
-  if (cripto === "btc"){
+  if (document.getElementById(btcoin)){
     resultado = dolar/bitcoin
-     alert("la cantidad de de Bitcoin sera "+ resultado )
+    finalIntercambio.innerHTML=resultado.toFixed(2);
   }
-   else if ( cripto === "eth"){
-    (resultado = dolar/etereum)
-     alert("La cantidad de Etereum sera $" + resultado)
+   else if ( document.getElementById(ethe)){
+    resultado = dolar/etereum;
+    finalIntercambio.innerHTML=resultado.toFixed(2);
    }
-     else if (cripto === "ada"){
-      (resultado = dolar/ada)
-       alert("La cantidad de Ada sera $" + resultado)
+     else if (document.getElementById(cardano)){
+      resultado = dolar/ada;
+      finalIntercambio.innerHTML=resultado.toFixed(2);
     }
-      else if (cripto === "xrp"){
-       (resultado = dolar/xrp)
-       alert("La cantidad de Xrp sera $" + resultado)
-     }
+      else if (document.getElementById(ripple)){
+       resultado = dolar/xrp;
+       finalIntercambio.innerHTML= resultado.toFixed(2);
+      }
 
  else {
-    alert("No colocaste ningun valor ")
+    ("No colocaste ningun valor ")
  }
 }
 
 convertir();
+
 
 const mostrarCripto=[];
 
@@ -40,18 +75,19 @@ const mostrarCripto=[];
     let xrp = 0.31;
 
  mostrarCripto.push({bitcoin:bitcoin, etereum:etereum, ada:ada, xrp:xrp}); 
+ 
+let pregunta = parseInt(document.getElementById("cotgral"));
 
-let pregunta = prompt("Le gustaria  conocer las  cotizaciones disponibles? Si/NO");
-
-if(pregunta ==="SI"|| "si"|| "Si"){
-  let carga = mostrarCripto.forEach(e => alert( "Las cotizaciones son : "+ "\n"+
-  "Bitcoin =$ "+e.bitcoin +"\n"+"Ethereum =$ "+ e.etereum +"\n"+"ADA =$ "+e.ada +"\n"+"Xrp =$ "+e.xrp));
-  console.log(carga);
+if(document.getElementById("SI")){ 
+  let carga = mostrarCripto.forEach(e =>carga.innerHTML( "Las cotizaciones son : "+ "\n"+
+  "Bitcoin =$ "+e.bitcoin +"\n"+"Ethereum =$ "+ e.etereum +"\n"+"ADA =$ "+e.ada +"\n"+"Xrp =$ "+e.xrp ));
 }
-  else if (pregunta ==="NO"|| "no"|| "No"){
-  alert("Muchas gracias por su consulta , vuelva pronto");
+  else if (document.getElementById("NO")){
+  pregunta.innerHTML=("Muchas gracias por su consulta , vuelva pronto");
   }
 else{
     alert("datos incorrectos");
     } 
+
+
 

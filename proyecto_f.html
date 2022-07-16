@@ -14,46 +14,72 @@
           <header>      
       <h1><b>Convertidor de Criptomonedas</b></h1><br><br>
      </header>
-      <form action="#">
-          <input type="text" value="1">
         </div>
       <div class="Primerimput">
         <div>
             <p>Si tenes</p>
             <div >
-              <select>
+              <select class="select" id="monedaUno">
                 <option value="">Elija su moneda</option>
-                <option value="Btc">Bitcoin</option>
-                <option value="Eth">Ethereum</option>
-                <option value="Ada">Ada</option>
-                <option value="xrp">Xrp</option>
+                <option value="USD">USD</option>
+                <option value="Btc" id="uno">Bitcoin</option>
+                <option value="Eth" id ="dos">Ethereum</option>
+                <option value="Ada" id="tres">Ada</option>
+                <option value="xrp" id="cuatro">Xrp</option>
               </select>
+          <input class="selectInput" type="number" id="valorUno" value="1">
+
             </div>
           </div>
+<div class="contenedor">
+            <div>
+              <button id="taza">
+            <img class="imgconvertir" src="proyecto_final\imagenes\convertir.png" alt="convertidor">
 
+            </div>
 
-          <div >
+</div>
+
+           <div > 
 
             <p><b>Recibiras</b></p>
 
-            <div class="">
-              <select>
+            <div >
+              <select class="select" id="monedaDos">
                  
-                <option value="ListaCodigoDePais.js">Elija su moneda</option>
-                <option value="USD">USD</option>
+                <option value="">Elija su moneda</option>
+                <option value="USD" >USD</option>
+                <option value="Btc" id="uno">Bitcoin</option>
+                <option value="Eth" id ="dos">Ethereum</option>
+                <option value="Ada" id="tres">Ada</option>
+                <option value="xrp" id="cuatro">Xrp</option>
+
+                <input class="selectInput" type="number" id="valorDos" >
+
                             
               </select>
+            <div class="resultado" id="valorCotizado"> 
+
+            </div>   <br>
+            <br><br>
+
             </div>
           </div>
         </div>
 
-        <div class="mjsBoton">Toque el boton para obtener su cotizacion...</div>
-        <button class="boton" value="cotizar" onclick="convertir">Solicite su cotizacion</button>
-      </form>
-    </div>
-  </div>
+      <!--   <div class="mjsBoton">Toque el boton para obtener su cotizacion...</div>
 
-  
+        <button class="boton" value="convertir" >Solicite su cotizacion</button>
+            </div>  -->
+
+  <h2>Te gustaria conocer las demas cotizaciones</h2>
+  <select name="cotizacion" id="cotgral">
+    <option value="">elegi tu opcion</option>
+    <option value="Si" id="SI">SI</option>
+    <option value="no" id="NO">NO</option>
+
+  </select>  
+      </div>
 
     <script src="script.js"></script>
   </body>

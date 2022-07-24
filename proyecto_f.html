@@ -9,6 +9,17 @@
   </head>
   <body>
 
+<div class="saludo" id="saludo">
+
+</div>
+
+<form action=""> 
+  <h1>Bienvenido a nuestro Convertidor</h1><br>
+
+   <input class="inputIngreso" type="text" id="usuario1">
+   
+</form>
+  
     <div class="contenedor"> 
          <div class="cotizador">
           <header>      
@@ -17,13 +28,14 @@
         </div>
       <div class="Primerimput">
         <div>
-            <p>Si tenes</p>              <select class="select" id="monedaUno">
-                <option value="">Elija su moneda</option>
-                <option value="USD" id="dolar">USD</option>   
+            <p>Si tenes</p>              
+            <select class="select" id="monedaUno">
+                <option value="USD" id="dolar">USD</option>
                 <option value="Btc" id="uno">Bitcoin</option>
                 <option value="Eth" id ="dos">Ethereum</option>
                 <option value="Ada" id="tres">Ada</option>
-                <option value="xrp" id="cuatro">Xrp</option>
+                <option value="xrp" id="cuatro">Xrp</option>>   
+               
               </select>
                 <input class="selectInput" type="number" id="valorUno" value="1">
 
@@ -41,17 +53,21 @@
 
             <p><b>Recibiras</b></p>  <div >
               <select class="select" id="monedaDos">
-                 
-                <option value="USD" id="dolar">USD</option>   
+                <option value="">Elija su moneda</option>
+                <option value="USD" id="dolar" >USD</option>
+                  <option value="Btc" id="uno">Bitcoin</option>
+                  <option value="Eth" id ="dos">Ethereum</option>
+                  <option value="Ada" id="tres">Ada</option>
+                  <option value="xrp" id="cuatro">Xrp</option>>
 
               
             
 
-<!--                 <input class="selectInput" type="number" id="valorDos" >
- -->
                             
               </select>
-            
+           <input class="selectInputn" type="number" id="valorDos" >
+
+
           </div>
 <div >
 
@@ -59,22 +75,20 @@
             <div class="resultado" id="valorCotizado"> 
 
             </div>  
-             <br>
-            <br>
-            <br>
-
+          <br>
+          <br>
+          <br>
             </div>
           </div>
         </div>
 
 <!--         <div class="mjsBoton">Toque el boton para obtener su cotizacion...</div>
  -->
-        <button class="boton" value="convertir" id="boton" >Solicite su cotizacion</button>
            </form>
            
             </div>
 
-  <h2>Te gustaria conocer las demas cotizaciones</h2>
+  <h2>Te gustaria conocer las demas cotizaciones</h2><br><br>
   <select name="cotizacion" id="cotgral">
     <option value="">elegi tu opcion</option>
     <option value="Si" id="SI">SI</option>

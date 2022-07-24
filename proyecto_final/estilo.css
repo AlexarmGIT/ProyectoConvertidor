@@ -88,3 +88,19 @@ color: #fff;}
   color: white;
   display:flex ;
 }
+.selectInputn{
+  display: none;
+}
+.saludo{
+  background-color: #4534fe;
+  width: 210px;
+  height: 105px;
+  color: whitesmoke;
+  font-size: 2rem;
+}
+.inputIngreso{
+  margin-left: 45%;
+  height: 40px;
+  width: 150px;
+}
+

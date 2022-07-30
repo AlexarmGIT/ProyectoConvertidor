@@ -15,6 +15,7 @@ const cotizacion = document.getElementById('cotgral')
 const saludar = document.getElementById('saludo')
 const ingreso = document.getElementById('usuario1')
 const botonera =document.getElementById('boton')
+
 /* Eventos */
 
 criptoUno.addEventListener('change',convertir)
@@ -26,15 +27,46 @@ ethe.addEventListener('change',convertir)
 cardano.addEventListener('change',convertir)
 ripple.addEventListener('change',convertir)
 finalIntercambio.addEventListener('change',convertir)
+criptoDos.addEventListener("change", () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Se calculo eitosamente su cotizacion'
+  })
+})
 intercambio.addEventListener("change",convertir)
 usd.addEventListener('change',convertir)
 yes.addEventListener("change",cotizaciones)
 nou.addEventListener("change",cotizaciones)
 cotizacion.addEventListener("change",cotizaciones)
-saludar.addEventListener("change",saludo)
-ingreso.addEventListener("input",saludo)
-/* botonera.addEventListener('click',saludo)
- */
+/* saludar.addEventListener("change",saludo)
+ */botonera.addEventListener("click",() => {
+  Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Genial',
+  text: 'Tu Nombre a sido ingresado correctamente',
+  showConfirmButton: false,
+  timer: 5000
+})
+
+})
+
+/*  ingreso.addEventListener("input",saludo)
+ */ 
+botonera.addEventListener('click',saludo)
+
 intercambio.addEventListener('click', ()=>{
   const cambio = criptoUno.value;
   criptoUno.value = criptoDos.value; 
@@ -42,17 +74,19 @@ intercambio.addEventListener('click', ()=>{
   convertir();
 })
 
+/* -----------------------------------------------------------------------
+ */
+
 /* Aplicando localStorage al usuario  */
 
 function saludo(){
 
 let usuario = document.getElementById("usuario1").value;
 
-let usuarioRec = localStorage.getItem("usuario" ,usuario)
- if (usuarioRec !== null  ){ 
-    usuario = usuarioRec
-    saludar.innerHTML=("BIENVENIDO " + "\n " + usuario +"!!!")
-
+let usuarioRec = localStorage.getItem("usuario")
+console.log(typeof usuarioRec)
+ if (usuarioRec !== "" || usuarioRec !== null ){ 
+    saludar.innerHTML=("BIENVENIDO " + "\n " + usuarioRec +"!!!");
  }else{
   localStorage.setItem("usuario", usuario)
  }
@@ -60,6 +94,8 @@ let usuarioRec = localStorage.getItem("usuario" ,usuario)
 saludo();
 /* -----------------------------------------------------------
  */
+
+/*Esta funcion se crea con el fin de generar el calculo matematico sobre el convertidor  */
 function convertir(){
 
   let dolar = 1;

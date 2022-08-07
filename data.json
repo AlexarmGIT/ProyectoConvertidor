@@ -1,0 +1,18 @@
+[
+    { 
+    "id": 1 ,
+    "nombre":"BITCOIN  " , 
+    "precio":19237},
+
+    {"id": 2 ,
+    "nombre":"ETHEREUM " , 
+    "precio":1052},
+
+    {"id": 3 ,
+    "nombre":"ADA  " , 
+    "precio":0.44},
+
+    {"id": 4 ,
+    "nombre":"XRP  " ,
+     "precio":0.31}
+  ]

@@ -131,16 +131,13 @@ convertir();
 
 function cotizaciones (){
   
-  const listaCripto = [
-  {id: 1 ,nombre:"BITCOIN  " , precio:19237},
-  {id: 2 ,nombre:"ETHEREUM " , precio:1052},
-  {id: 3 ,nombre:"ADA  " , precio:0.44},
-  {id: 4 ,nombre:"XRP  " , precio:0.31},
-]
+fetch ('/data.json')
+.then((res) => res.json())
+.then((data) => { 
 
 if(cotizacion.value===yes.value){ 
-  listaCripto.forEach((elemento) => {
-       let div = document.createElement("div");
+  data.forEach((elemento) => {
+       let div  = document.createElement("div");
        div.innerHTML = `
        Cripto: <b>${elemento.nombre}</b> 
        Precio: <b>$${elemento.precio}</b> 
@@ -155,9 +152,6 @@ let H1= document.createElement("H1")
   H1.innerHTML=("Muchas gracias por su consulta , vuelva pronto");
   document.body.append(H1);
   }
-/* else{
-let fallo = document.createElement("h1"); 
-fallo.innerHTML=("datos ingresados Incorrectos")
-document.body.append(fallo); }  */
+})
 }
 cotizaciones();

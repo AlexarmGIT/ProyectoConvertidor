@@ -86,7 +86,7 @@ let usuario = document.getElementById("usuario1").value;
 let usuarioRec = localStorage.getItem("usuario",usuario)
 usuario==usuarioRec
  if (usuarioRec !== "" && usuarioRec !== null  ){
-    saludar.innerHTML=("BIENVENIDO " + "\n " + usuarioRec +"!!!");
+    saludar.innerHTML=("BIENVENIDO/A " + "\n " + usuarioRec +"!!!");
  }else{
   localStorage.setItem("usuario", usuario)
  }
@@ -99,93 +99,96 @@ saludo();
 function convertir(){
 
   let dolar = 1;
-  let bitcoin = 19237;
-  let etereum = 1052;
-  let ada = 0.44;
-  let xrp = 0.31;
+  let bitcoin = 24104;
+  let etereum = 1894;
+  let ada = 0.55;
+  let xrp = 0.37;
 
 
-/*   const valor=document.getElementById("valorUno")
 
-  switch(valor){ 
-  
-    case criptoUno.value ===usd.value && criptoDos.value=== btcoin.value:
+    if (criptoUno.value ===usd.value && criptoDos.value=== btcoin.value){
       resultado = document.getElementById("valorUno").value /bitcoin;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Bitcoin")
-      break
-     case criptoUno.value ===btcoin.value && criptoDos.value=== usd.value:
-      resultado = document.getElementById("valorUno").value /dolar;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")
-      break
-    }
-  } */
-  /*  case 3:
-     (criptoUno.value ===usd.value && criptoDos.value=== ethe.value);{
-      resultado = document.getElementById("valorUno").value /etereum;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ethereum")};
-      break     
-   case 4:
-     (criptoUno.value ===ethe.value && criptoDos.value=== usd.value);{
-      resultado = document.getElementById("valorUno").value /dolar;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")};
-      break   
-   case 5:
-     (criptoUno.value ===cardano.value && criptoDos.value=== usd.value);{
-      resultado = document.getElementById("valorUno").value /ada;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")};
-      break 
-    case 6:
-      (criptoUno.value ===usd.value && criptoDos.value=== cardano.value);{
-       resultado = document.getElementById("valorUno").value /dolar;
-       finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")};
-       break 
-     case 7:
-      (criptoUno.value ===usd.value && criptoDos.value=== ripple.value);{
-        resultado = document.getElementById("valorUno").value /xrp;
-        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp")};
-        break   
-     case 8:
-      (criptoUno.value ===ripple.value && criptoDos.value=== usd.value);{
-        resultado = document.getElementById("valorUno").value /dolar;
-        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")};
-        break    
-               */
+      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Bitcoin");
+     }
+      else if( criptoUno.value ===btcoin.value && criptoDos.value=== usd.value){
+      resultado = document.getElementById("valorUno").value * bitcoin;
+      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares");}
 
+      else if ( criptoUno.value === usd.value && criptoDos.value===ethe .value ){
+        resultado = document.getElementById("valorUno").value/etereum;
+        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ethereum");
+      }
+      else if(criptoUno.value ===ethe.value && criptoDos.value=== usd.value){
+        resultado = document.getElementById("valorUno").value * etereum;
+        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares");
+      }
+        else if (criptoUno.value === cardano.value && criptoDos.value=== usd.value){
+          resultado = document.getElementById("valorUno").value/ada;
+          finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")}
 
-   if (criptoUno.value ===usd.value && criptoDos.value=== btcoin.value){
-    resultado = document.getElementById("valorUno").value /bitcoin;
-    finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Bitcoin");
-  }
-  else if( criptoUno.value ===btcoin.value && criptoDos.value=== usd.value){
-  resultado = document.getElementById("valorUno").value * bitcoin;
-  finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares");}
+      else if(criptoUno.value ===usd.value && criptoDos.value=== cardano.value){
+          resultado = document.getElementById("valorUno").value * ada;
+          finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")}
 
-   else if ( criptoUno.value === usd.value && criptoDos.value===ethe .value ){
-    resultado = document.getElementById("valorUno").value/etereum;
-    finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ethereum");
-   }
-   else if(criptoUno.value ===ethe.value && criptoDos.value=== usd.value){
-    resultado = document.getElementById("valorUno").value * etereum;
-    finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares");
-   }
-     
-   else if (criptoUno.value === cardano.value && criptoDos.value=== usd.value){
-      resultado = document.getElementById("valorUno").value/ada;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares");
-   }
-   else if(criptoUno.value ===usd.value && criptoDos.value=== cardano.value){
-      resultado = document.getElementById("valorUno").value * ada;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")
-   }
+      else if (criptoUno.value === usd.value && criptoDos.value=== ripple.value){
+          resultado = document.getElementById("valorUno").value/xrp;
+          finalIntercambio.innerHTML= ("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp")}
 
-   else if (criptoUno.value === ripple.value && criptoDos.value=== usd.value){
-       resultado = document.getElementById("valorUno").value/xrp;
-       finalIntercambio.innerHTML= ("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp");
-   }
-   else if(criptoUno.value ===ripple.value && criptoDos.value=== usd.value){
-      resultado = document.getElementById("valorUno").value * xrp;
-      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")
-   } 
+      else if(criptoUno.value ===ripple.value && criptoDos.value=== usd.value){
+          resultado = document.getElementById("valorUno").value * xrp;
+          finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Dolares")
+        } 
+      else if(criptoUno.value === btcoin.value && criptoDos.value === ethe.value){
+        resultado = document.getElementById("valorUno").value / etereum;
+        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" ethereum");}
+
+      else if(criptoUno.value === ethe.value && criptoDos.value === btcoin.value){
+          resultado = document.getElementById("valorUno").value / bitcoin;
+          finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" bitcoin")}
+
+      else if(criptoUno.value === btcoin.value && criptoDos.value === cardano.value){
+            resultado = document.getElementById("valorUno").value / ada;
+            finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")}
+
+      else if(criptoUno.value === cardano.value && criptoDos.value === btcoin.value){
+              resultado = document.getElementById("valorUno").value / bitcoin;
+              finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" bitcoin")}
+
+      else if(criptoUno.value === btcoin.value && criptoDos.value === ripple.value){
+                resultado = document.getElementById("valorUno").value / xrp;
+                finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp")}
+
+      else if(criptoUno.value === ripple.value && criptoDos.value === btcoin.value){
+                  resultado = document.getElementById("valorUno").value / bitcoin;
+                  finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" bitcoin")}
+
+      else if(criptoUno.value === ethe.value && criptoDos.value === btcoin.value){
+                    resultado = document.getElementById("valorUno").value / bitcoin;
+                    finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" bitcoin")}
+
+      else if(criptoUno.value === ethe.value && criptoDos.value === ripple.value){
+                      resultado = document.getElementById("valorUno").value / xrp;
+                      finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp")}
+
+      else if(criptoUno.value === ripple.value && criptoDos.value === ethe.value){
+                        resultado = document.getElementById("valorUno").value / etereum;
+                        finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ethereum")}
+
+      else if(criptoUno.value === ethe.value && criptoDos.value === cardano.value){
+                          resultado = document.getElementById("valorUno").value / ada;
+                          finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")}
+
+      else if(criptoUno.value === cardano.value && criptoDos.value === ethe.value){
+                            resultado = document.getElementById("valorUno").value / etereum;
+                            finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ethereum")}
+
+      else if(criptoUno.value === cardano.value && criptoDos.value === ripple.value){
+                              resultado = document.getElementById("valorUno").value / xrp;
+                              finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Xrp")}
+
+      else if(criptoUno.value === ripple.value && criptoDos.value === cardano.value){
+                                resultado = document.getElementById("valorUno").value / ada;
+                                finalIntercambio.innerHTML=("Tu resultado es de"+ "\n "+resultado +"\n "+" Ada")}
 
  else {
     ("No colocaste ningun valor ")
@@ -203,11 +206,26 @@ fetch ('/data.json')
 if(cotizacion.value===yes.value){ 
   data.forEach((elemento) => {
        let div  = document.createElement("div");
-       div.innerHTML = `
-       Cripto: <b>${elemento.nombre}</b> 
-       Precio: <b>$${elemento.precio}</b> 
-       <hr/>
-     `;
+       div.innerHTML =  `<div class="cont_div">
+       <div class="elemento">
+       <table border="5">
+  <tr>
+    <td>Cripto</td> 
+
+    <td>Precio</td>
+  
+  </tr>
+  <tr>
+    <td><b>${elemento.nombre}</b></td>
+
+    <td> <b>$${elemento.precio}</b> </td>
+  </tr>
+
+
+</table>
+     
+    </div> 
+    </div>`;
        document.body.append(div);
      });
 

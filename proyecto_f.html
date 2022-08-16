@@ -9,14 +9,15 @@
   </head>
   <body>
 
-<div class="saludo" id="saludo">       
+<div class="saludo" id="saludo">  
+  <img class="usuario" src="./proyecto_final/imagenes/usuario.png" alt="usuario.">     
 
 </div>
 
 <form action="">  
-  <h1>Bienvenido a nuestro Convertidor</h1><br>
+  <h1 class="bienvenido">Bienvenido a nuestro Convertidor</h1><br>
 
-   <input class="inputIngreso" type="text" id="usuario1">
+   <input class="inputIngreso" type="text" id="usuario1"><br>
 
    <button class="boton" id="boton">ingrese su nombre</button>
  
@@ -44,12 +45,16 @@
 
             </div>
            
-<div class="contenedor">
+<div class="contenedores">
             <div>
               <button id="taza">
             <img class="imgconvertir" src="proyecto_final\imagenes\convertir.png" alt="convertidor">
 
             </div>
+            <div class="resultado" id="valorCotizado"> 
+
+            </div> 
+            
 
 </div>
 <form action=""><div > 
@@ -74,11 +79,8 @@
           </div>
 <div >
 
-           
-            <div class="resultado" id="valorCotizado"> 
-
-            </div>  
-          <br>
+ 
+          
           <br>
           <br>
             </div>
@@ -90,7 +92,7 @@
            
             </div>
 
-  <h2>Te gustaria conocer las demas cotizaciones</h2><br>
+  <h2>Te gustaria conocer las cotizaciones del dia?</h2><br>
   <select class="select" name="cotizacion" id="cotgral">
     <option value="">elegi tu opcion</option>
     <option value="Si" id="SI">SI</option>
@@ -104,3 +106,4 @@
 
   </body>
 </html>
+

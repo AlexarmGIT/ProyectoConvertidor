@@ -2,18 +2,18 @@
     { 
     "id": 1 ,
     "nombre":"BITCOIN  " , 
-    "precio":19237},
+    "precio":24104},
 
     {"id": 2 ,
     "nombre":"ETHEREUM " , 
-    "precio":1052 },
+    "precio":1894 },
 
     {"id": 3 ,
     "nombre":"ADA  " , 
-    "precio":0.44},
+    "precio":0.55},
 
     {"id": 4 ,
     "nombre":"XRP  " ,
-     "precio":0.31
+     "precio":0.37
 }
   ]

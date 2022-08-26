@@ -2,10 +2,21 @@
     margin: 0;
     padding: 0;
   }
-  body{
+  /* 
     display: block;
     justify-content: center;
-background-image: url(imagenes/fondociudad.jpg);    }
+background-image: url(imagenes/fondociudad.jpg);     */
+body{
+  display: block;
+  justify-content: center;
+  background-image: url(imagenes/fondo2.jpg);
+  max-height: 100vh;
+  overflow: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
     .contenedor{
     height: 100%;
   
@@ -27,7 +38,7 @@ width: 300px;
 height: 100px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 background-color: black;
-background-image: url(imagenes/cripto2.jpg);
+background-image: url(imagenes/fondociudad.jpg);
 color: gold;}
 
 .cont_div{
